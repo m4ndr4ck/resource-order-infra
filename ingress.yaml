@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: gateway-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+spec:
+  rules:
+  - host: services.oss.redecorp
+    http:
+      paths:
+      - path: /resource-order(/|$)(.*)
+        backend:
+          serviceName: resource-order
+          servicePort: 8080
+      - path: /resource-order-orchestration(/|$)(.*)
+        backend:
+          serviceName: resource-order-orchestration
+          servicePort: 8080
+      - path: /resource-order-gateway(/|$)(.*)
+        backend:
+          serviceName: resource-order-gateway
+          servicePort: 8080
