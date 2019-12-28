@@ -10,5 +10,6 @@ kubectl apply -f ingress.yaml
 kubectl apply -f mongodb-configmap.yaml 
 kubectl apply -f mondodb-secret.yaml 
 kubectl apply -f mongodb-deployment.yaml 
+kubectl apply -f serviceaccount-rbac.yaml 
 ```
 
