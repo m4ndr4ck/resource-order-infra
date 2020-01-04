@@ -8,6 +8,11 @@ Fluentd cria um DeamonSet para garantir que todos os nós do cluster possuam um 
 
 Para habilitar o monitoramento da infraestrutura, via Grafana e Prometheus, instale o objeto ingress-monitoring.yaml e também os que estão no diretório grafana e prometheus.
 
+No arquivo hosts do sistema operacional adicione as seguintes entradas:
+
+***{ip.do.minikube} prometheus.oss.redecorp**
+**{ip.do.minikube} grafana.oss.redecorp**
+
 
 ```
 kubectl apply -f ingress.yaml 
