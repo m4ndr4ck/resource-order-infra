@@ -4,7 +4,9 @@ O Ingress do Nginx no Kubernetes atua como API Gateway expondo externamente as A
 
 O MongoDB é utilizado para persistir dados.
 
-Para habilitar o monitoramento da infraestrutura instale o objeto ingress-monitoring.yaml e também os que estão no diretório grafana e prometheus.
+Fluentd cria um DeamonSet para garantir que todos os nós do cluster possuam um pod rodando o agente do fluentd. Esse agente é responsável por coletar logs dos pods e enviar para o Elasticsearch.
+
+Para habilitar o monitoramento da infraestrutura, via Grafana e Prometheus, instale o objeto ingress-monitoring.yaml e também os que estão no diretório grafana e prometheus.
 
 
 ```
