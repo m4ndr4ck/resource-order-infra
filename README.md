@@ -11,6 +11,7 @@ Para habilitar o monitoramento da infraestrutura, via Grafana e Prometheus, inst
 No arquivo hosts do sistema operacional adicione as seguintes entradas:
 
 **{ip.do.minikube} prometheus.oss.redecorp**
+
 **{ip.do.minikube} grafana.oss.redecorp**
 
 
