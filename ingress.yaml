@@ -4,6 +4,9 @@ metadata:
   name: gateway-ingress
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /$2
+    prometheus.io/scrape: 'true'
+    prometheus.io/path:   /metrics
+    prometheus.io/port:   '80'
 spec:
   rules:
   - host: services.oss.redecorp
